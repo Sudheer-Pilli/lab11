@@ -1,0 +1,216 @@
+/*----CSS for index.html----*/
+
+@import url("./SignIn.css");
+@import url("./calender.css");
+
+@font-face {
+    font-family:'Montserrat';
+    src: url("../font/Montserrat-Regular.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat';
+    background-color: #f9f9f9;
+}
+h1{
+    margin-bottom: 3%;
+}
+li:hover, .meeting_card_wrapper p:hover{
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.top_nav{
+    display: flex;
+    padding: 0.8% 1%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0E0661 ;
+    color: #ffffff;
+    animation: slide-down 700ms ease-in-out;
+}
+    .top_nav ul{
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        width: 45%;
+        font-weight: 500;
+    }
+
+.dashboard{
+    display: flex;
+}
+
+.left_nav{
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    background-color: #93A1EC;
+    font-size: 1.2rem;
+    animation: slide-right 700ms ease-in-out;
+}
+    .left_nav ul{
+        list-style: none;
+    }
+    .left_nav li{
+        margin: 8% 0;
+    }
+    .left_nav li:nth-child(1){
+        color: #ffffff;
+        font-weight: 800;
+    }
+    .left_nav .left_nav_sub{
+        margin:8% 15%;
+    }
+    .material-icons{
+        font-size: 30px;
+    }
+
+    .material-icons:hover{
+        cursor: pointer;
+        color:#e05e5e;
+    }
+.content_wrapper{
+    width: 72%;
+    padding:3% 5%;
+    animation: slide-up 1s ease-in-out;
+}
+.card_wrapper{
+    display: flex;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: .7rem;
+    margin: 2%;
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 2px  #333333;
+}
+.card:hover{
+    background-color: #FF7575;
+    color: #ffffff;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+    .task_card{
+        padding: 3%;
+        width: 12%;
+    }
+    .task_card p{
+        font-size: .7rem;
+        margin-bottom: 60%;
+    }
+
+.meeting_card_wrapper{
+    flex-direction: column;
+    text-align: center;
+}
+    .meeting_card{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1% 0;
+        padding: 2%;
+    }
+    .meeting_card_right{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 25%;
+    }
+
+@keyframes slide-down {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes slide-right {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes slide-up {
+    0%{
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*------------------Media Queries for Responsive Design----------------------------*/
+@media screen and (max-width: 2560px) {
+    html{
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    html{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    html{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1336px) {
+    html{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .meeting_card h1{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    html{
+        font-size: 8px;
+    }
+    .card_wrapper{
+        flex-direction: column;
+    }
+    .task_card{
+        width: 70%;
+    }
+    .task_card h3{
+        font-size: 2rem;
+    }
+    .task_card p{
+        font-size: 1.2rem;
+    }
+    .task_card h6{
+        font-size: 1rem;
+    }
+}

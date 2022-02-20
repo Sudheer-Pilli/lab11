@@ -1,0 +1,33 @@
+
+
+<div>
+    <h1 style="height: 1rem;background-color: blue;"></h1>
+    <div class="container-fluid p-3">
+        <table class="table table-borderless table-hover container-fluid">
+            <thead>
+                <tr>
+                    <th>Std_id</th>
+                    <th>Std_Name</th>
+                    <th>dept_id</th>
+                    <th>Std_Phone_No</th>
+                    <th>Age</th>
+                    <th>marks</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="emp in employees">
+                <tr>
+                    <td>{{emp.Std_id}}</td>
+                    <td>{{emp.Std_Name}}</td>
+                    <td>{{emp.dept_id}}</td>
+                    <td>{{emp.Std_Phone_No}}</td>
+                    <td>{{emp.Age}}</td>
+                    <td>{{emp.marks}}</td>
+                    <td><span class='material-icons' ng-click="updateEmp(emp)">edit</span></td>
+                    <td><span class='material-icons' ng-click="removeEmp(emp.Std_id, emp.Std_Name)">delete</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

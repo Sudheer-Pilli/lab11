@@ -1,0 +1,30 @@
+
+
+<div>
+    <h1 style="height: 1rem;background-color: blue;"></h1>
+    <div class="container-fluid p-3">
+        <table class="table table-borderless table-hover container-fluid">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Performance</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="emp in employees">
+                <tr>
+                    <td>{{emp.name | uppercase}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.phone}}</td>
+                    <td>{{emp.role | lowercase}}</td>
+                    <td>{{emp.performance}}%</td>
+                    <td>{{emp.salary | currency}}</td>
+                    <td><span class='material-icons' ng-click="removeEmp($index, emp.name)">delete</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div>
+    <h1 style="height: 1rem;background-color: yellow;"></h1>
+
+    <form id='addRecordForm' action="{{formAction}}" method="post" class="container col-sm-5 pt-4">
+        <h2>Enter New Record</h2>
+        <div class="mb-3 mt-3">
+            <label for="id">ID</label>
+            <input type='text' name='Std_id' id='id' class="form-control" ng-model="emp.Std_id" placeholder="Enter Std_id..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="name">Name</label>
+            <input type='text' name='Std_Name' id='firstname' class="form-control" ng-model="emp.Std_Name" placeholder="Enter name..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="phone">Dept_id</label>
+            <input type='text' name='dept_id' id='phone' class="form-control" ng-model="emp.dept_id" placeholder="Enter dept_id..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="email">Std_phono_no</label>
+            <input type='text' name='Std_Phone_No' id='email' class="form-control" ng-model="emp.Std_Phone_No" placeholder="Enter Phone No..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="address">Age</label>
+            <input type='text' name='Age' id='address' class="form-control" ng-model="emp.Age" placeholder="Enter Age..">
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="joiningdate">marks</label>
+            <input type='text' name='marks' id='joiningdate' class="form-control" ng-model="emp.marks" placeholder="Enter marks..">
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
